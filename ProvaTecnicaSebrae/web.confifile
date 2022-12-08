@@ -1,0 +1,3 @@
+﻿<connectionStrings>
+  <add name="ContaContext" connectionString="Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=ContaContext;Integrated Security=SSPI;" providerName="System.Data.SqlClient" />
+</connectionStrings>
