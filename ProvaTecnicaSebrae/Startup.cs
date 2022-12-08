@@ -6,6 +6,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using ProvaTecnicaSebrae.Interfaces;
+using ProvaTecnicaSebrae.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,6 +35,10 @@ namespace ProvaTecnicaSebrae
                 c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Testes", Version = "v1" });
             });
 
+
+            services.AddScoped<IEnderecoService, EnderecoService>();
+
+            services.AddMvc();
 
         }
 
