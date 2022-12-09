@@ -26,9 +26,9 @@ namespace ProvaTecnicaSebrae.Services
 
         public int Delete(long id)
         {
-            Validacao(id, OperacaoCadastro.Delete);
-
             var contaRemovida = _contaContext.Conta.FirstOrDefault(x => x.Id == id);
+            
+             Validacao(id, OperacaoCadastro.Delete);
 
             if (contaRemovida != null)
                 _contaContext.Conta.Remove(contaRemovida);
